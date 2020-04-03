@@ -12,7 +12,6 @@
     <div id="main">
       <div id="container">
         <div id="content" role="main">
-          <!-- TODO: Content goes here -->
           <header>
             <img src="logo.png" alt="logo-epam">
             <h1>HTML BASICS</h1>
@@ -166,23 +165,30 @@ both           <b>spaces</b> and
           </section>
           <section id="registration">
             <form action="/" method="get">
-              <label for="name">Name:</label>
-              <input type="text" title="Name" name="name" id="name">
-              <br>
-              <label for="e-mail">Email:</label>
-              <input type="email" title="E-mail" name="e-mail" id="e-mail">
-              <br>
-              <label for="password">Password:</label>
-              <input type="password" title="Password" name="password" id="password">
-              <br>
-              <label for="select">Select Programming Language:</label>
-              <select name="select" id="select">
-                <option value="JavaScript" title="JavaScript">JavaScript</option>
-                <option value=".Net" title=".Net">.Net</option>
-                <option value="Java" title="Java">Java</option>
-              </select>
-              <br><br>
-              <textarea name="Textarea" id="textarea" cols="23" rows="4"></textarea>
+              <fieldset>
+                <label for="name">Name:</label>
+                <input type="text" title="Name" name="name" id="name">
+              </fieldset>
+              <fieldset>
+                <label for="e-mail">Email:</label>
+                <input type="email" title="E-mail" name="e-mail" id="e-mail">
+              </fieldset>
+              <fieldset>
+                <label for="password">Password:</label>
+                <input type="password" title="Password" name="password" id="password">
+              </fieldset>
+              <fieldset>
+                <label for="select">Select Programming Language:</label>
+                <select name="select" id="select">
+                    <option value="JavaScript" title="JavaScript">JavaScript</option>
+                    <option value=".Net" title=".Net">.Net</option>
+                    <option value="Java" title="Java">Java</option>
+                </select>
+              </fieldset>
+                <br>
+              <fieldset>
+                <textarea name="text" cols="23" rows="4"></textarea>
+              </fieldset>
                 <fieldset>
                     <button type="submit" title="Submit" value="Submit">Submit</button>
                 </fieldset>
