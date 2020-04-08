@@ -1,11 +1,162 @@
-/*
-
-write your code here
-
-*/
+section, .tm-sidebar, #home {
+    box-shadow: 0 0 15px 0 rgba(61, 55, 61, 0.7);
+}
+section::before {
+    content: '';
+    border: 22px solid transparent;
+    border-left: 22px solid #76cdd7;
+    border-top: 22px solid #76cdd7;
+    z-index: 2;
+}
+.tm-section-description {
+    font-style: italic;
+    text-indent: 20px;
+}
+nav li, .box-bg {
+    transition: all .5s;
+}
+nav li:hover, .box-bg:hover {
+    background-color: lightskyblue;
+    transition: all .5s;
+}
+.tm-nav-item-link, .box-bg h2 {
+    transition: all .5s;
+    cursor: default;
+}
+.tm-nav-item-link:hover, .box-bg h2:hover{
+    color: #fff;
+    transition: all .5s;
+}
+.box-bg h2:hover{
+    font-weight: 500;
+}
+.tm-banner-inner {
+    background: #fff;
+}
+.tm-banner {
+    background: linear-gradient(burlywood, lightskyblue);
+}
+.tm-banner-text {
+    letter-spacing: 0.22em;
+    word-spacing: 0.44em;
+    text-shadow: 0 4px 1px #76cdd7, 0 12px 2px #76cdd7;
+    -webkit-animation: ease 3s text-rotate;
+    -o-animation: ease 3s text-rotate;
+    animation: ease 3s text-rotate;
+}
+@keyframes text-rotate {
+    from {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+.flex-2-col {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.flex-2-col .flex-item {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+h2.tm-section-title {
+    text-align: center;
+}
+.heading h2 {
+    text-align: center;
+    color: lightskyblue;
+}
+.heading ol {
+    list-style-type: decimal-leading-zero;
+}
+.heading li a {
+    transition: all .1s;
+}
+.heading li a:hover {
+    color: red;
+    transition: all .1s;
+    font-weight: 600;
+}
+.heading li:hover::before {
+    content: '>';
+    color: red;
+    font-weight: bold;
+}
+.heading li:hover.heading li a {
+    color: red;
+}
+.heading li:nth-child(1)::after, .heading li:nth-child(3)::after {
+    content: 'New';
+    color: red;
+    vertical-align: super;
+    font-size: 9px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.blocks .gallery-container li.box {
+    padding: 10px;
+}
+.blocks .gallery-container li:nth-child(even) {
+    background: #76cdd7;
+    color: #fff;
+}
+.box-work p {
+    font-style: italic;
+}
+.box-work p:first-letter {
+    font-weight: bold;
+}
+#contact h2 {
+    text-align: right;
+}
+form input[type="text"], form input[type="email"] {
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid lightskyblue;
+    border-left: none;
+    color: #fff;
+}
+form textarea[id="contact_message"] {
+    color: #fff;
+}
+input[name="contact_subject"] {
+    background: url(../img/email-icon.png) no-repeat right;
+    background-size: 30px 30px;
+}
+input:focus, textarea:focus {
+    background: lightskyblue;
+}
+button[type="submit"] {
+    float: right;
+    border: 2px solid lightskyblue;
+    background: none;
+    border-radius: 0;
+    color: lightskyblue;
+    width: 135px;
+    height: 50px;
+    transition: 0.3s;
+}
+button[type="submit"]:hover {
+    background: lightseagreen;
+    border: 2px solid lightseagreen;
+    transition: 0.3s;
+}
 @media print {
     body, .tm-main-content {
         padding-top: 0;
+    }
+    p {
+        text-indent: inherit;
     }
     h2 {
         text-transform: uppercase;
@@ -13,8 +164,8 @@ write your code here
     h2 ~ p {
         font-style: italic;
     }
-    .tm-banner-text {
-        letter-spacing: 6px;
+    .tm-banner {
+        background: none;
     }
     .tm-section-title {
         text-align: center;
@@ -29,9 +180,10 @@ write your code here
     .tm-team-img, .tm-sidebar, .boxes, .img-contact-us, #contact, .carousel-indicators, #about {
         display: none;
     }
+    .tm-team-img img {
+        display: none;
+    }
     .heading h2 {
-        text-align: center;
-        color: lightskyblue;
         font-weight: 300;
     }
     .heading ol {
@@ -49,9 +201,12 @@ write your code here
         background: #fff;
     }
     .padding-medium {
-        padding: 10px 40px;
+        padding: 10px 35px;
     }
     .carousel {
-        padding: 10px 50px 10px;
+        padding: 10px 35px 10px;
+    }
+    ::before, ::after{
+        display: none;
     }
 }
