@@ -1,0 +1,57 @@
+/*
+
+write your code here
+
+*/
+@media print {
+    body, .tm-main-content {
+        padding-top: 0;
+    }
+    h2 {
+        text-transform: uppercase;
+    }
+    h2 ~ p {
+        font-style: italic;
+    }
+    .tm-banner-text {
+        letter-spacing: 6px;
+    }
+    .tm-section-title {
+        text-align: center;
+    }
+    .tm-team-description-container {
+        max-width: none;
+        text-align: center;
+    }
+    .tm-content-box {
+        margin-bottom: 0;
+    }
+    .tm-team-img, .tm-sidebar, .boxes, .img-contact-us, #contact, .carousel-indicators, #about {
+        display: none;
+    }
+    .heading h2 {
+        text-align: center;
+        color: lightskyblue;
+        font-weight: 300;
+    }
+    .heading ol {
+        width: 50%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .heading li {
+        list-style: none;
+    }
+    .heading li:nth-child(even) {
+        text-align: end;
+    }
+    .blocks, .tm-footer {
+        background: #fff;
+    }
+    .padding-medium {
+        padding: 10px 40px;
+    }
+    .carousel {
+        padding: 10px 50px 10px;
+    }
+}
