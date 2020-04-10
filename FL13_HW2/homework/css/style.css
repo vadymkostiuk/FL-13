@@ -36,30 +36,6 @@ nav li:hover, .box-bg:hover {
 .tm-banner {
     background: linear-gradient(burlywood, lightskyblue);
 }
-.tm-banner-text {
-    letter-spacing: 0.22em;
-    word-spacing: 0.44em;
-    text-shadow: 0 4px 1px #76cdd7, 0 12px 2px #76cdd7;
-    -webkit-animation: ease 3s text-rotate;
-    -o-animation: ease 3s text-rotate;
-    animation: ease 3s text-rotate;
-}
-@keyframes text-rotate {
-    from {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-    to {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-}
 .flex-2-col {
     display: flex;
     flex-direction: row-reverse;
@@ -87,15 +63,17 @@ h2.tm-section-title {
     transition: all .1s;
     font-weight: 600;
 }
-.heading li:hover::before {
+.heading li a:hover::before {
+    display: inline-block;
     content: '>';
     color: red;
     font-weight: bold;
 }
-.heading li:hover.heading li a {
+.heading li a:hover.heading li a {
     color: red;
 }
-.heading li:nth-child(1)::after, .heading li:nth-child(3)::after {
+.text::after {
+    display: inline-block;
     content: 'New';
     color: red;
     vertical-align: super;
@@ -151,6 +129,35 @@ button[type="submit"]:hover {
     border: 2px solid lightseagreen;
     transition: 0.3s;
 }
+input[class="form-control"]:focus, textarea[class="form-control"]:focus {
+    box-shadow: none;
+}
+@media screen {
+    .tm-banner-text {
+        letter-spacing: 0.22em;
+        word-spacing: 0.44em;
+        text-shadow: 0 4px 1px #76cdd7, 0 12px 2px #76cdd7;
+        -webkit-animation: ease 3s text-rotate;
+        -o-animation: ease 3s text-rotate;
+        animation: ease 3s text-rotate;
+    }
+    @keyframes text-rotate {
+        from {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        to {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+    }
+}
 @media print {
     body, .tm-main-content {
         padding-top: 0;
@@ -166,6 +173,7 @@ button[type="submit"]:hover {
     }
     .tm-banner {
         background: none;
+        padding: 0 30px;
     }
     .tm-section-title {
         text-align: center;
