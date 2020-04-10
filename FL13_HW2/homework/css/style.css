@@ -98,10 +98,8 @@ h2.tm-section-title {
     text-align: right;
 }
 form input[type="text"], form input[type="email"] {
-    border-top: none;
-    border-right: none;
+    border: none;
     border-bottom: 1px solid lightskyblue;
-    border-left: none;
     color: #fff;
 }
 form textarea[id="contact_message"] {
@@ -126,7 +124,7 @@ button[type="submit"] {
 }
 button[type="submit"]:hover {
     background: lightseagreen;
-    border: 2px solid lightseagreen;
+    border: 2px solid transparent;
     transition: 0.3s;
 }
 input[class="form-control"]:focus, textarea[class="form-control"]:focus {
@@ -137,23 +135,13 @@ input[class="form-control"]:focus, textarea[class="form-control"]:focus {
         letter-spacing: 0.22em;
         word-spacing: 0.44em;
         text-shadow: 0 4px 1px #76cdd7, 0 12px 2px #76cdd7;
-        -webkit-animation: ease 3s text-rotate;
-        -o-animation: ease 3s text-rotate;
         animation: ease 3s text-rotate;
     }
     @keyframes text-rotate {
         from {
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
             transform: rotate(45deg);
         }
         to {
-            -webkit-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
             transform: rotate(0deg);
         }
     }
