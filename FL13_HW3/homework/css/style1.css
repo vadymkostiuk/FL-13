@@ -10,7 +10,7 @@ body {
   background: #fff; }
 
 header {
-  background: url("../img/m-h-day.jpg") 0 51% no-repeat;
+  background: url("../img/m-h-day.jpg") 0 50% no-repeat;
   background-size: cover;
   border-radius: 0 0 40% 0 / 40%; }
   header .header-wrap {
@@ -22,7 +22,8 @@ header {
       color: #2c2f3c;
       white-space: pre-line;
       line-height: 1.6vw;
-      margin-top: 4vw; }
+      margin-top: 2vw;
+      margin-bottom: 6vh; }
     header .header-wrap .header_button {
       font-weight: 500;
       font-size: 1.2vw;
@@ -39,16 +40,15 @@ header {
       color: #fff;
       font-size: 1.3vw;
       font-family: "Source Sans Pro", sans-serif; }
-  header .header_heading > * {
-    z-index: 100; }
   header .header_heading {
     font-size: 4.7vw;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
+    color: #2c2f3c;
     letter-spacing: -0.04vw;
     line-height: 4.7vw;
     margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
     z-index: 100;
     position: relative; }
     header .header_heading:after {
@@ -62,7 +62,8 @@ header {
       left: 0; }
 
 .landing-logo {
-  display: flex; }
+  display: flex;
+  color: #2c2f3c; }
   .landing-logo span {
     font-size: 0.7vw;
     font-weight: 500;
@@ -84,6 +85,7 @@ main .section_text {
   font-size: 2.7vw;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
+  color: #2c2f3c;
   margin-top: 2.4vw;
   text-align: center;
   position: relative; }
@@ -136,8 +138,8 @@ main .section_banner {
   display: flex;
   position: relative;
   background: linear-gradient(90deg, #649411, #2e5cd4);
-  top: 5vw;
-  margin: 9vw auto 0 auto;
+  top: 5.5vw;
+  margin: 4vw auto 0 auto;
   width: 62vw;
   height: 9.5vw;
   border-radius: 0.4vw;
@@ -162,7 +164,7 @@ main .section_banner_heading {
     left: 8vw;
     bottom: 0; }
 main .section_banner_text {
-  color: #fff;
+  color: #c0c3ce;
   font-family: "Hind", sans-serif;
   font-size: 1vw;
   letter-spacing: 0.02vw; }
@@ -185,14 +187,16 @@ footer, main .section_card {
   justify-content: space-between;
   margin: 0 10vw 0 10vw;
   align-items: center;
-  height: 16vw;
+  height: 17vw;
   box-sizing: border-box;
   padding-top: 5vw; }
+  .footer-wrap .footer_logo {
+    color: #c0c3ce; }
   .footer-wrap .footer_text {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 0.99vw;
-    width: 25%;
-    letter-spacing: -0.01vw; }
+    font-family: "Hind", sans-serif;
+    font-size: 0.9vw;
+    width: 25%; }
   .footer-wrap .footer-cr {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 1.1vw; }
+    font-family: "Hind", sans-serif;
+    font-size: 1vw;
+    letter-spacing: 0.02vw; }

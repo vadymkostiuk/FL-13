@@ -43,7 +43,7 @@ body {
   background: $body-bg;
 }
 header {
-  background: $bg-header 0 51% no-repeat;
+  background: $bg-header 0 50% no-repeat;
   background-size: cover;
   border-radius: 0 0 40% 0 / 40%;
 
@@ -53,13 +53,14 @@ header {
 
     .header_text {
       font: {
-        family: $hind-font;
+        family: $hind-to-fresca-font;
         size: 1.07vw;
       }
       color: $color-header;
       white-space: pre-line;
       line-height: 1.6vw;
-      margin-top: 4vw;
+      margin-top: 2vw;
+      margin-bottom: 6vh;
     }
     .header_button {
       @include button;
@@ -73,19 +74,17 @@ header {
       @include link(#fff, 1.3vw);
     }
   }
-  .header_heading > * {
-    z-index: 100;
-  }
   .header_heading {
     font: {
       size: 4.7vw;
       family: $sourse-sans-font;
       weight: 700;
     }
+    color: $color-header;
     letter-spacing: -0.04vw;
     line-height: 4.7vw;
     margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
     z-index: 100;
     position: relative;
     &:after {
@@ -98,6 +97,7 @@ header {
 }
 .landing-logo {
   display: flex;
+  color: $color-header;
 
   span {
     font: {
@@ -117,7 +117,7 @@ header {
     font: {
       size: 1.5vw;
       weight: 600;
-      family: $hind-font;
+      family: $hind-to-fresca-font;
     }
     margin-left: 1vw;
     line-height: 0.7vw;
@@ -130,6 +130,7 @@ main {
       family: $sourse-sans-font;
       weight: 600;
     }
+    color: $color-header;
     margin-top: 2.4vw;
     text-align: center;
     position: relative;
@@ -165,7 +166,7 @@ main {
       color: #c0c3ce;
       font: {
         size: 1.08vw;
-        family: $hind-font;
+        family: $hind-to-fresca-font;
       }
       width: 75%;
       margin: 0 auto;
@@ -189,8 +190,8 @@ main {
     display: flex;
     position: relative;
     background: $gradient-color;
-    top: 5vw;
-    margin: 9vw auto 0 auto;
+    top: 5.5vw;
+    margin: 4vw auto 0 auto;
     width: 62vw;
     height: 9.5vw;
     border-radius: 0.4vw;
@@ -198,7 +199,7 @@ main {
     align-items: center;
   }
   .section_banner_heading {
-    color: #2c2f3c;
+    color: $color-header;
     font: {
       size: 2vw;
       family: $sourse-sans-font;
@@ -215,9 +216,9 @@ main {
     }
   }
   .section_banner_text {
-    color: #fff;
+    color: #c0c3ce;
     font: {
-      family: $hind-font;
+      family: $hind-to-fresca-font;
       size: 1vw;
     }
     letter-spacing: 0.02vw;
@@ -235,23 +236,26 @@ footer {
   justify-content: space-between;
   margin: 0 10vw 0 10vw;
   align-items: center;
-  height: 16vw;
+  height: 17vw;
   box-sizing: border-box;
   padding-top: 5vw;
 
+  .footer_logo {
+    color: #c0c3ce;
+  }
   .footer_text {
     font: {
-      family: $sourse-sans-font;
-      size: 0.99vw;
+      family: $hind-to-fresca-font;
+      size: 0.9vw;
     }
     width: 25%;
-    letter-spacing: -0.01vw;
   }
   .footer-cr {
     font: {
-      family: $sourse-sans-font;
-      size: 1.1vw;
+      family: $hind-to-fresca-font;
+      size: 1vw;
     }
+    letter-spacing: 0.02vw;
   }
 }
 
