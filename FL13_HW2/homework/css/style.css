@@ -202,7 +202,7 @@ input[class="form-control"]:focus, textarea[class="form-control"]:focus {
     .carousel {
         padding: 10px 35px 10px;
     }
-    ::before, ::after{
+    ::before, ::after, .text::after{
         display: none;
     }
 }
