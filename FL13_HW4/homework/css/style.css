@@ -12,7 +12,7 @@ nav {
     margin: 0 auto;
     height: 5vw;
 }
-p, a, button {
+p, a, button, time {
     color: #777;
 }
 nav .left-nav {
