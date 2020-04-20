@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,12 @@
 </head>
 <body>
 <header>
-  <section class="container">
+  <section aria-label="quick summary" class="container nav-container">
+    <nav class="hamb">
+      <span></span>
+      <span></span>
+      <span></span>
+    </nav>
     <nav>
       <div class="left-nav">
         <a href="#">Travel<span>Blog</span></a>
@@ -27,11 +32,11 @@
   </section>
 </header>
 <main>
-  <section class="container container-main">
-    <article class="post-container">
+  <section aria-label="quick summary" class="container container-main">
+    <article aria-label="quick summary" class="post-container">
       <article class="post post-1">
         <div class="img-post">
-          <img src="img/post1.jpg" alt="">
+          <img src="img/post1.jpg" alt="post">
         </div>
         <div class="content">
           <div class="content-desc">
@@ -46,7 +51,7 @@
       </article>
       <article class="post post-2">
         <div class="img-post">
-          <img src="img/post2.jpg" alt="">
+          <img src="img/post2.jpg" alt="post">
         </div>
         <div class="content">
           <div class="content-desc">
@@ -61,7 +66,7 @@
       </article>
       <article class="post post-3">
         <div class="img-post">
-          <img src="img/post3.jpg" alt="">
+          <img src="img/post3.jpg" alt="post">
         </div>
         <div class="content">
           <div class="content-desc">
@@ -76,7 +81,7 @@
       </article>
       <article class="post post-4">
         <div class="img-post">
-          <img src="img/post4.jpg" alt="">
+          <img src="img/post4.jpg" alt="post">
         </div>
         <div class="content">
           <div class="content-desc">
@@ -89,20 +94,49 @@
           </div>
         </div>
       </article>
+      <article class="poster">
+        <h2>And again - it's totally amazing</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam, consequatur culpa nisi asperiores consequuntur explicabo nam, voluptatibus tempore non placeat tempora delectus deleniti, alias sed voluptates dolores nesciunt.</p>
+      </article>
     </article>
     <aside class="news">
-      <article>
-        <img src="img/news1.jpg" alt="">
-        <h2>Breaking news</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eius explicabo perferendis maxime, ad enim, asperiores modi inventore eligendi dignissimos consequatur dolores placeat, nisi omnis quas. Non totam in impedit?</p>
-        <button type="button">Learn more</button>
+      <article class="container-news">
+        <div class="news-photo">
+          <img src="img/news1.jpg" alt="news">
+        </div>
+        <div class="news-content">
+          <h2>Breaking news</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eius explicabo perferendis maxime, ad enim, asperiores modi inventore eligendi dignissimos consequatur dolores placeat, nisi omnis quas. Non totam in impedit?</p>
+          <button type="button">Learn more...</button>
+        </div>
+      </article>
+      <article class="container-news">
+        <div class="news-photo">
+          <img src="img/news2.jpg" alt="news">
+        </div>
+        <div class="news-content">
+          <h2>Second news on the Travel blog</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eius explicabo perferendis maxime, ad enim, asperiores modi inventore eligendi dignissimos consequatur dolores placeat, nisi omnis quas. Non totam in impedit?</p>
+          <button type="button">Learn more...</button>
+        </div>
       </article>
     </aside>
   </section>
 </main>
 <footer>
-  <section class="container">
-    
+  <section aria-label="quick summary" class="container">
+    <div class="left-side">
+      <p>Copyright 2020, Epam systems
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      </p>
+    </div>
+    <div class="right-side">
+      <p>Design and coding
+      </p>
+      <p>by Vadym Kostyuk
+      </p>
+    </div>
   </section>
 </footer>
 </body>
