@@ -10,6 +10,5 @@ Tip: ${percent}%
 Tip amount: ${amount}
 Total sum to pay:  ${sum}`);
 } else {
-    alert('Invalid input data')
+    alert('Invalid input data');
 }
-
