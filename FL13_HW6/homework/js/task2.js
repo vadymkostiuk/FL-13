@@ -6,5 +6,3 @@ if(userText.length === 0 || !userText.trim()) {
 } else {
     alert(`'${result}'`);
 }
-
-console.log(two - userText.length % two);
