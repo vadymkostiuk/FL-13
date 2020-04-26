@@ -28,7 +28,7 @@ if(login === null || login.length === 0 || !login.trim()) {
             alert('Good evening, dear Admin!');
         }
     } else {
-        alert('Wrong password')
+        alert('Wrong password');
     }
 } else {
     alert('I don’t know you');
