@@ -8,13 +8,13 @@ const minDayHour = 8;
 const maxDayHour = 19;
 const date = new Date().getHours();
 if(login === null || login.length === 0 || !login.trim()) {
-    alert('Canceled.');
+    alert('Canceled');
 } else if (login.length < maxLength){
-    alert('I don\'t know any users having name length less than 4 symbols.');
+    alert('I don\'t know any users having name length less than 4 symbols');
 } else if(login === user || login === admin) {
-    const password = prompt('Please enter password');
+    const password = prompt('Please enter your Password');
     if(password === null || password.length === 0 || !password.trim()) {
-        alert('Canceled.');
+        alert('Canceled');
     } else if(login === user && password === userPass) {
         if (date >= minDayHour && date <= maxDayHour) {
             alert('Good day, dear User!');
