@@ -21,6 +21,7 @@ Possible prize on current attempt: ${nextPrize}$`);
 
         if (userRandom === random) {
             totalPrize += nextPrize;
+
             let playCont = confirm(`Congratulation, you won! Your prize is: ${nextPrize}$. Do you want to continue?`);
 
             if(playCont === true) {
@@ -39,6 +40,7 @@ Possible prize on current attempt: ${nextPrize}$`);
 
             } else {
                 alert(`Thank you for your participation. Your prize is: ${totalPrize}$`);
+
                 let playAgain = confirm('Do you want to play again?');
 
                 if(playAgain === true) {
@@ -52,7 +54,9 @@ Possible prize on current attempt: ${nextPrize}$`);
 
         } else if( i === 1 ) {
             alert(`Thank you for your participation. Your prize is: ${totalPrize}$`);
+
             let playAgain = confirm('Do you want to play again?');
+
             if(playAgain === true) {
                 maxRand = maxRandIter;
                 maxNumber = maxIteration;
@@ -62,7 +66,9 @@ Possible prize on current attempt: ${nextPrize}$`);
         } else {
             nextPrize = nextPrize / reducingWin;
         }
+
     }
+
 };
 
 if(playGame === true) {
