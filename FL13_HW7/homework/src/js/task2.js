@@ -13,11 +13,11 @@ let game = (nextPrize = firstPrize) => {
     const random = +Math.round(Math.random() * maxRand);
 
     for (let i = maxAttempt; i >= 1; i--) {
-        const userRandom = +prompt(`
+        const userRandom = parseInt(prompt(`
 Choose a roulette pocket number from 0 to ${maxNumber}
 Attempts left: ${i}
 Total prize: ${totalPrize}$
-Possible prize on current attempt: ${nextPrize}$`);
+Possible prize on current attempt: ${nextPrize}$`));
 
         if (userRandom === random) {
             totalPrize += nextPrize;
