@@ -8,5 +8,3 @@ const CONVERT = (...strOrNum) => {
 
   return args;
   };
-
-// console.log(CONVERT('1', 2, 3, '4'));
