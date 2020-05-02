@@ -12,9 +12,9 @@ const COUNT_POINTS = result => {
       }
 
     }
-    return totalPoints;
 
-  },0);
+    return totalPoints;
+    },0);
 
 };
 
