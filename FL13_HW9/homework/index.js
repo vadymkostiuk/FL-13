@@ -9,36 +9,29 @@ const CONVERT = (...strOrNum) => {
   return args;
   };
 
-// console.log(CONVERT('1', 2, 3, '4'));
-
 let executeForEach = (array, func) => {
 
   for (let el = 0; el < array.length; el++) {
-
-    func(Number(array[el]));
+    func(array[el]);
   }
 
 };
 
-// executeForEach([1,2,3], function(el) {console.log(el * 2)});
-
-const MAP_ARRAY = (arr, call) => {
+let mapArray = (arr, func) => {
   let newArr = [];
 
   executeForEach(arr, item => {
-      newArr.push(call(item));
+      newArr.push(func(Number(item)));
   });
 
   return newArr;
 };
 
-// console.log(MAP_ARRAY([2, '5', 8], function(el) {return el + 3}));
-
-const FILTER_ARRAY = (arr, call) => {
+const FILTER_ARRAY = (arr, func) => {
   let newArr = [];
 
   executeForEach(arr, item => {
-    if (call(item)) {
+    if (func(item)) {
       newArr.push(item);
     }
   });
@@ -46,22 +39,19 @@ const FILTER_ARRAY = (arr, call) => {
   return newArr;
 };
 
-// console.log(FILTER_ARRAY([2, 5, 8], function(el) { return el % 2 === 0 }));
-
 const CONTAINS_VALUE = (arr, num) => {
   let result = false;
 
   executeForEach(arr, el => {
+
     if (el === num) {
       result = true;
     }
+
   });
 
   return result;
 };
-
-// console.log(CONTAINS_VALUE([2, 5, 8], 2));
-// console.log(CONTAINS_VALUE([12, 4, 6], 5));
 
 const FLIP_OVER = words => {
   let reverse = '';
@@ -69,7 +59,74 @@ const FLIP_OVER = words => {
   for (let i = words.length - 1; i >= 0; i--) {
     reverse += words[i];
   }
+
   words = `'${reverse}'`;
+
   return words;
 };
-// console.log(FLIP_OVER('hey world'));
+
+const MAKE_LIST_FROM_RANGE = array => {
+  let result = [];
+
+  if (array[0] > array[1]) {
+
+    for (let i = array[1]; i <= array[0]; i++) {
+      result.push(i);
+    }
+
+  } else {
+
+    for (let i = array[0]; i <= array[1]; i++) {
+      result.push(i);
+    }
+
+  }
+
+  return result;
+};
+
+const GET_ARRAY_OF_KEYS = (arr, key) => {
+  let newArr = [];
+
+  executeForEach(arr,obj => {
+    newArr.push(obj[key]);
+  });
+
+  return newArr;
+};
+
+const SUBSTITUTE = arr => {
+  let newArr = [];
+  const LOWER_THAN = 20;
+  const GREATER_THAN = 10;
+
+  mapArray(arr, num => {
+
+    if(num < LOWER_THAN && num > GREATER_THAN) {
+      num = '*';
+    }
+
+    newArr.push(num);
+  });
+
+  return newArr
+};
+
+const GET_PAST_DAY = (date, day) => {
+  date.setDate(date.getDate() - day);
+
+  return date.getDate();
+};
+
+const FORMAT_DATE = time => {
+  const YEAR = time.getFullYear();
+  const MAX_VAL = 10;
+  const MONTH = time.getMonth() + 1;
+  const DAY = time.getDate();
+  const HOURS = time.getHours();
+  const MINUTES = time.getMinutes();
+
+  let prefixZero = time => time > MAX_VAL ? time : `0${time}`;
+
+  return `${YEAR}/${prefixZero(MONTH)}/${prefixZero(DAY)} ${prefixZero(HOURS)}:${prefixZero(MINUTES)}`
+};
