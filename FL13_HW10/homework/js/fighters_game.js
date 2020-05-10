@@ -30,7 +30,7 @@ const Fighter = function (param) {
 
   this.attack = (fighter2) => {
     const MAX_SUCCESS = 100;
-    const random = Math.random() * MAX_SUCCESS;
+    const random = Math.ceil(Math.random() * MAX_SUCCESS);
     const probOfAttack = MAX_SUCCESS - (strength + agility) ;
     let isAttack = false;
 
