@@ -1,1 +1,8 @@
-/* TODO: your styles goes here*/
+ul li {
+    list-style: none;
+}
+.parent i {
+    color: #FFC107;
+    font-size: 25px;
+    vertical-align: bottom;
+}
